@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/gestor.css">
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+        <link rel="shortcut icon" href="iconos/browser.ico" type="image/x-icon">
+        <title>Gestor de Acuerdos</title>
+    </head>
+    <body class="d-block">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-custom">
+                <a class="navbar-brand text-white " id="titulo" href="#">Sistema Gestor de
+                    Acuerdos</a>
+                <div class="text-white" id="navbar1">
+                    <a href="#"> <img
+                            src="iconos/icons8-usuario-masculino-en-círculo-50.png"
+                            class="rounded-circle" alt="Usuario">
+                    </a>
+                </div>
+            </nav>
+        </header>
+
+        <div class="container mt-4">
+            <button type="button" class="btn btn-custom mb-3"
+                data-toggle="modal" id="btnAgregar" data-target="#nuevoAcuerdoModal">+ Nuevo
+                Acuerdo</button>
+
+            <table class="table">
+                <thead class="thead-light">
+                    <tr>
+                        <th>Lista de Acuerdos</th>
+                        <th>Fecha de cumplimiento</th>
+                        <th>Nombre Responsable</th>
+                        <th>Estado</th>
+                        <th>Descripción</th>
+                    </tr>
+                </thead>
+                <tbody id="acuerdosTabla">
+                    <!-- Los acuerdos se agregarán aquí -->
+                </tbody>
+            </table>
+        </div>
+        
+
+        <!-- Modal -->
+
+<!-- 
+        <div class="modal fade" id="nuevoAcuerdoModal" tabindex="-1" role="dialog" aria-labelledby="nuevoAcuerdoModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="nuevoAcuerdoModalLabel">Nuevo Acuerdo</h5>
+                        
+                    </div>
+                    <div class="modal-body">
+                        <form action id="formAcuerdo" class="needs-validation" novalidate>
+                            <div class="form-group">
+                                <label for="fecha">Fecha de Cumplimiento</label>
+                                <input type="date" class="form-control" id="fecha" required>
+                                <div class="invalid-feedback">
+                                
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="responsable">Responsable</label>
+                                <input type="text" class="form-control" id="responsable" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="estado">Estado</label>
+                                <select class="form-control" id="estado">
+                                    <option value="cumplido">Cumplido</option>
+                                    <option value="pendiente">Pendiente</option>
+                                    <option value="incumplido">Incumplido</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="descripcion">Descripción</label>
+                                <textarea class="form-control" id="descripcion" rows="3" required></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" id="btnCerrarModal" data-dismiss="modal">Cerrar</button>
+                        <button type="submit" class="btn btn-primary" id="guardarAcuerdo">Guardar</button>
+                    </div>
+                </div>
+            </div> -->
+
+
+            <div class="modal fade" id="nuevoAcuerdoModal" tabindex="-1" role="dialog" aria-labelledby="nuevoAcuerdoModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="nuevoAcuerdoModalLabel">Nuevo Acuerdo</h5>
+                        </div>
+                        <div class="modal-body">
+                            <form id="formAcuerdo" class="needs-validation" novalidate>
+                                <div class="form-group">
+                                    <label for="fecha">Fecha de Cumplimiento</label>
+                                    <input type="date" class="form-control" id="fecha" required>
+                                    <div class="invalid-feedback">
+                                        Por favor, ingrese una fecha válida.
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="responsable">Responsable</label>
+                                    <input type="text" class="form-control" id="responsable" required>
+                                    <div class="invalid-feedback">
+                                        Por favor, ingrese el nombre del responsable.
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="estado">Estado</label>
+                                    <select class="form-control" id="estado" required>
+                                        <option value="">Seleccione un estado</option>
+                                        <option value="cumplido">Cumplido</option>
+                                        <option value="pendiente">Pendiente</option>
+                                        <option value="incumplido">Incumplido</option>
+                                    </select>
+                                    <div class="invalid-feedback">
+                                        Por favor, seleccione un estado.
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="descripcion">Descripción</label>
+                                    <textarea class="form-control" id="descripcion" rows="3" required></textarea>
+                                    <div class="invalid-feedback">
+                                        Por favor, ingrese una descripción.
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" id="btnCerrarModal" data-dismiss="modal">Cerrar</button>
+                            <button type="button" class="btn btn-primary" id="guardarAcuerdo">Guardar</button>
+                        </div>
+                    </div>
+                </div>
+
+        </div>
+
+        <script src="jquery/jquery-3.7.1.min.js"></script>
+        <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="js/gestor.js"></script>
+    </body>
+</html>

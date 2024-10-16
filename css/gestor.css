@@ -1,0 +1,35 @@
+
+#titulo{
+    padding-left: 20px;
+}
+#navbar1 {
+    padding-left: 76%;
+}
+
+.navbar-custom {
+    background-color: #6f1a13;
+}
+
+.modal-header {
+    background-color: #6f1a13;
+    color: white;
+}
+
+.modal-footer .btn-secondary {
+    background-color: #6f1a13;
+}
+
+.ml-auto {
+    margin-left: auto;
+}
+
+#btnAgregar {
+    background-color: #98ca84;
+    color: white;
+}
+
+#btnAgregar:hover {
+    background-color: #80d45c;
+}
+
+/* Eliminar las reglas personalizadas para .modal y .modal--show */
